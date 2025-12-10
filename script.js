@@ -1,4 +1,4 @@
-const SPREADSHEET_URL = "1yNmv_uH5unVszMM8bdpSktuQYAoprdQLPfd3L5fhdbg"; // ganti dengan WebApp URL
+const SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbxNqh5TPxd4a6aSM62Kxqh4-L-O4CtS7TAFXfzKSexjYlbyMmVPkzyP1QR_M4cic6OV/exec"; // ganti dengan WebApp URL
 
 let asetData = [];
 
