@@ -1,6 +1,8 @@
+const SPREADSHEET_URL = "1yNmv_uH5unVszMM8bdpSktuQYAoprdQLPfd3L5fhdbg"; // ganti dengan WebApp URL
+
 let asetData = [];
 
-fetch('data.json')
+fetch(SPREADSHEET_URL)
 .then(response => response.json())
 .then(data => {
   asetData = data;
@@ -32,10 +34,7 @@ function renderCharts(data){
         data.filter(d=>d.Jenis_Aset==='Bangunan').length
       ], backgroundColor:['#0066CC','#009688'] }]
     },
-    options:{
-      responsive:true,
-      maintainAspectRatio:false
-    }
+    options:{ responsive:true, maintainAspectRatio:false }
   });
 
   new Chart(document.getElementById('statusChart'),{
@@ -47,10 +46,7 @@ function renderCharts(data){
         data.length - data.filter(d=>d.Tanggal_Berlaku && new Date(d.Tanggal_Berlaku) > new Date()).length
       ], backgroundColor:['#009688','#E53935'] }]
     },
-    options:{
-      responsive:true,
-      maintainAspectRatio:false
-    }
+    options:{ responsive:true, maintainAspectRatio:false }
   });
 }
 
