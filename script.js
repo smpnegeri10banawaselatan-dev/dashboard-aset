@@ -31,6 +31,10 @@ function renderCharts(data){
         data.filter(d=>d.Jenis_Aset==='Tanah').length,
         data.filter(d=>d.Jenis_Aset==='Bangunan').length
       ], backgroundColor:['#0066CC','#009688'] }]
+    },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false
     }
   });
 
@@ -42,6 +46,10 @@ function renderCharts(data){
         data.filter(d=>d.Tanggal_Berlaku && new Date(d.Tanggal_Berlaku) > new Date()).length,
         data.length - data.filter(d=>d.Tanggal_Berlaku && new Date(d.Tanggal_Berlaku) > new Date()).length
       ], backgroundColor:['#009688','#E53935'] }]
+    },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false
     }
   });
 }
